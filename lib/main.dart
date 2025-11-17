@@ -172,43 +172,43 @@ class _MyHomePageState extends State<MyHomePage> {
             )
           ],
         ),
-      ),*/
-
+      ),
+*/
       ///Row
-      // body: Container(
-      //   ///horizontal width for Row
-      //   // width: 300,
-      //
-      //
-      //   ///vertical height for Row
-      //       height: 300,
-      //
-      //
-      //   child: Row(
-      //     ///mainAxisAlignment (Horizontal changes)
-      //     // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-      //     // mainAxisAlignment: MainAxisAlignment.spaceAround,
-      //     // mainAxisAlignment: MainAxisAlignment.center,
-      //     // mainAxisAlignment: MainAxisAlignment.end,
-      //     mainAxisAlignment: MainAxisAlignment.start,
-      //
-      //     ///crossAxisAlignment (vertical changes)
-      //     // crossAxisAlignment: CrossAxisAlignment.center,
-      //     // crossAxisAlignment: CrossAxisAlignment.end,
-      //     crossAxisAlignment: CrossAxisAlignment.start,
-      //     children: [
-      //       Text('A', style: TextStyle(fontSize: 25),),
-      //       Text('B', style: TextStyle(fontSize: 25),),
-      //       Text('C', style: TextStyle(fontSize: 25),),
-      //       Text('D', style: TextStyle(fontSize: 25),),
-      //       Text('E', style: TextStyle(fontSize: 25),),
-      //       ElevatedButton(onPressed: (){
-      //
-      //       }, child: Text('OK')
-      //       )
-      //     ],
-      //   ),
-      // ),
+      /*body: Container(
+        ///horizontal width for Row
+        // width: 300,
+
+
+        ///vertical height for Row
+            height: 300,
+
+
+        child: Row(
+          ///mainAxisAlignment (Horizontal changes)
+          // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          // mainAxisAlignment: MainAxisAlignment.spaceAround,
+          // mainAxisAlignment: MainAxisAlignment.center,
+          // mainAxisAlignment: MainAxisAlignment.end,
+          mainAxisAlignment: MainAxisAlignment.start,
+
+          ///crossAxisAlignment (vertical changes)
+          // crossAxisAlignment: CrossAxisAlignment.center,
+          // crossAxisAlignment: CrossAxisAlignment.end,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text('A', style: TextStyle(fontSize: 25),),
+            Text('B', style: TextStyle(fontSize: 25),),
+            Text('C', style: TextStyle(fontSize: 25),),
+            Text('D', style: TextStyle(fontSize: 25),),
+            Text('E', style: TextStyle(fontSize: 25),),
+            ElevatedButton(onPressed: (){
+
+            }, child: Text('OK')
+            )
+          ],
+        ),
+      ),*/
 
 
       /// Inkwell widget: It responds to the touch action as performed by the user.
@@ -250,114 +250,115 @@ class _MyHomePageState extends State<MyHomePage> {
       ///SCROLLVIEW AND ITS TYPES
       ///Vertical + Horizontal
 
-      // body: Padding(
-      //   padding: const EdgeInsets.all(8.0),
-      //   child: SingleChildScrollView(
-      //
-      //     child: Column(
-      //       children: [
-      //         Padding(
-      //           padding: const EdgeInsets.only(bottom: 11),
-      //           child: SingleChildScrollView(
-      //             scrollDirection: Axis.horizontal,
-      //             child: Row(
-      //               children: [
-      //                 Container(
-      //                   margin: EdgeInsets.only(right: 11),
-      //                   height: 200,
-      //                   width: 200,
-      //                   color: Colors.amber,
-      //                 ),
-      //                 Container(
-      //                   margin: EdgeInsets.only(right: 11),
-      //                   height: 200,
-      //                   width: 200,
-      //                   color: Colors.green,
-      //                 ),
-      //                 Container(
-      //                   margin: EdgeInsets.only(right: 11),
-      //                   height: 200,
-      //                   width: 200,
-      //                   color: Colors.purple,
-      //                 ),
-      //                 Container(
-      //                   margin: EdgeInsets.only(right: 11),
-      //                   height: 200,
-      //                   width: 200,
-      //                   color: Colors.deepOrange,
-      //                 ),
-      //                 Container(
-      //                   margin: EdgeInsets.only(right: 11),
-      //                   height: 200,
-      //                   width: 200,
-      //                   color: Colors.blueAccent,
-      //                 ),
-      //               ],
-      //             ),
-      //           ),
-      //         ),
-      //
-      //         Container(
-      //           margin: EdgeInsets.only(bottom: 11),
-      //           height: 200,
-      //           color: Colors.green,
-      //         ),
-      //
-      //         Container(
-      //           margin: EdgeInsets.only(bottom: 11),
-      //           height: 200,
-      //           color: Colors.blue,
-      //         ),
-      //
-      //         Container(
-      //           margin: EdgeInsets.only(bottom: 11),
-      //           height: 200,
-      //           color: Colors.red,
-      //         ),
-      //
-      //         Container(
-      //           margin: EdgeInsets.only(bottom: 11),
-      //           height: 200,
-      //           color: Colors.purple,
-      //         ),
-      //
-      //         Container(
-      //           margin: EdgeInsets.only(bottom: 11),
-      //           height: 200,
-      //           color: Colors.pink,
-      //         ),
-      //       ],
-      //     ),
-      //   ),
-      // ),
+      /*body: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: SingleChildScrollView(
 
+          child: Column(
+            children: [
+              Padding(
+                padding: const EdgeInsets.only(bottom: 11),
+                child: SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  child: Row(
+                    children: [
+                      Container(
+                        margin: EdgeInsets.only(right: 11),
+                        height: 200,
+                        width: 200,
+                        color: Colors.amber,
+                      ),
+                      Container(
+                        margin: EdgeInsets.only(right: 11),
+                        height: 200,
+                        width: 200,
+                        color: Colors.green,
+                      ),
+                      Container(
+                        margin: EdgeInsets.only(right: 11),
+                        height: 200,
+                        width: 200,
+                        color: Colors.purple,
+                      ),
+                      Container(
+                        margin: EdgeInsets.only(right: 11),
+                        height: 200,
+                        width: 200,
+                        color: Colors.deepOrange,
+                      ),
+                      Container(
+                        margin: EdgeInsets.only(right: 11),
+                        height: 200,
+                        width: 200,
+                        color: Colors.blueAccent,
+                      ),
+                    ],
+                  ),
+                ),
+              ),
 
-      // body: ListView(
-      //   scrollDirection: Axis.horizontal,
-      //   reverse: true,
-      //   children: [
-      //     Padding(
-      //       padding: const EdgeInsets.all(8.0),
-      //       child: Text('One', style: TextStyle(fontSize: 21, fontWeight: FontWeight.w500),),
-      //     ),
-      //     Padding(
-      //       padding: const EdgeInsets.all(8.0),
-      //       child: Text('Two', style: TextStyle(fontSize: 21, fontWeight: FontWeight.w500),),
-      //     ),
-      //     Padding(
-      //       padding: const EdgeInsets.all(8.0),
-      //       child: Text('Three', style: TextStyle(fontSize: 21, fontWeight: FontWeight.w500),),
-      //     ),
-      //     Padding(
-      //       padding: const EdgeInsets.all(8.0),
-      //       child: Text('Four', style: TextStyle(fontSize: 21, fontWeight: FontWeight.w500),),
-      //     ),
-      //     Padding(
-      //       padding: const EdgeInsets.all(8.0),
-      //       child: Text('Five', style: TextStyle(fontSize: 21, fontWeight: FontWeight.w500),),
-      //     ),
-      //   ],
-      // )
+              Container(
+                margin: EdgeInsets.only(bottom: 11),
+                height: 200,
+                color: Colors.green,
+              ),
+
+              Container(
+                margin: EdgeInsets.only(bottom: 11),
+                height: 200,
+                color: Colors.blue,
+              ),
+
+              Container(
+                margin: EdgeInsets.only(bottom: 11),
+                height: 200,
+                color: Colors.red,
+              ),
+
+              Container(
+                margin: EdgeInsets.only(bottom: 11),
+                height: 200,
+                color: Colors.purple,
+              ),
+
+              Container(
+                margin: EdgeInsets.only(bottom: 11),
+                height: 200,
+                color: Colors.pink,
+              ),
+            ],
+          ),
+        ),
+      ),*/
+
+   ///List view Horizontal
+
+   /*   body: ListView(
+        scrollDirection: Axis.horizontal,
+        reverse: true,
+        children: [
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Text('One', style: TextStyle(fontSize: 21, fontWeight: FontWeight.w500),),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Text('Two', style: TextStyle(fontSize: 21, fontWeight: FontWeight.w500),),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Text('Three', style: TextStyle(fontSize: 21, fontWeight: FontWeight.w500),),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Text('Four', style: TextStyle(fontSize: 21, fontWeight: FontWeight.w500),),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Text('Five', style: TextStyle(fontSize: 21, fontWeight: FontWeight.w500),),
+          ),
+        ],
+      )*/
 
 
       ///List view for fetch api data
@@ -383,7 +384,7 @@ class _MyHomePageState extends State<MyHomePage> {
         )*/
 
       ///Try to desing a listview format
-        body: ListView.separated(itemBuilder: (context, index){
+ /*       body: ListView.separated(itemBuilder: (context, index){
           return Row(
             children: [
             Padding(
@@ -411,7 +412,146 @@ class _MyHomePageState extends State<MyHomePage> {
           separatorBuilder: (context, index){
             return Divider(height: 100, thickness: 4,);
           },
-        )
+        )*/
+
+      ///Adding Decoration to Container
+      /** Inside Container you can't use decoration and color both together,
+       * If you want to use color then you have to use it inside decoration.*/
+      /*body: Container(
+        width: double.infinity,
+        height: double.infinity,
+        // color: Colors.blue.shade50,
+        child: Center(
+          child: Container(
+            width: 150,
+            height: 150,
+            decoration: BoxDecoration(
+              color: Colors.blueGrey,
+              // borderRadius: BorderRadius.circular(11),
+              // borderRadius: BorderRadius.only(topLeft: Radius.circular(21), bottomRight: Radius.circular(21)),
+                border: Border.all(
+                  width: 5,
+                  color: Colors.black
+                ),
+                boxShadow: [
+                  BoxShadow(
+                    blurRadius: 21,
+                    color: Colors.grey,
+                    spreadRadius: 21
+                  )
+                ],
+
+                shape: BoxShape.circle
+                //if i give half value of width of container inside circular it will become circle
+                // borderRadius: BorderRadius.circular(75),
+            ),
+          ),
+        ),
+      ),*/
+
+
+      ///Expanded Widget
+   /*   body: Row(
+        // mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Container(
+            width: 50,
+            height: 100,
+            color: Colors.blue,
+          ),
+
+          Expanded(
+            flex: 2,
+            child: Expanded(
+              child: Container(
+                width: 50,
+                height: 100,
+                color: Colors.red,
+              ),
+            ),
+          ),
+          Expanded(
+            flex: 3,
+            child: Container(
+              width: 50,
+              height: 100,
+              color: Colors.green,
+            ),
+          ),
+           Container(
+              width: 50,
+              height: 100,
+              color: Colors.grey,
+            ),
+        ],
+      ),*/
+
+      ///Margin & Padding
+
+      /*** Padding ***/
+    /*  body: Padding(
+        // padding: const EdgeInsets.all(8.0),   /// Give padding same for all 4 side
+        padding: EdgeInsets.only(top:11, left: 34), // Give padding for your selected side
+        child: Text('Hello World!', style: TextStyle(fontSize: 25),),
+      ),*/
+      
+      
+      /*** Margin ***/
+      /*body: Container(
+          color: Colors.blueGrey,
+          margin: EdgeInsets.all(11),
+          child: Padding(
+            // padding: const EdgeInsets.all(8.0),
+            padding: EdgeInsets.only(top: 21, left: 34, bottom: 11, right: 34),
+            child: Text(
+              'Hello World!',
+               style: TextStyle(
+                   fontSize: 25, color: Colors.white
+               ),
+            ),
+          )
+      ),*/
+
+      ///List Tile
+        ///we can remove leading, title, subtitle, trailing based on our design needs
+       /*body: ListView.separated(itemBuilder: (context, index){
+          return ListTile(
+            leading: Text('${index+1}'),
+            title: Text(arrnames[index]),
+            subtitle: Text('Number'),
+            trailing: Icon(Icons.add),
+          );
+        },
+
+          itemCount: arrnames.length,
+          separatorBuilder: (context, index){
+          return Divider(height: 20, thickness: 4,);
+          },
+        )*/
+
+
+      ///Circle-Avatar
+      //---It is simply a circle in which we can add background color, background image or just some text
+      //---It usually represents a user with his image or with his initials.
+      //---Although we can make a similar widget from the ground up
+      //---This widget comes in handy in the fast development of an application.
+
+      body: Center(
+        //we can also use radius for increase the size of the circular avatar
+        // child: Container(
+        //   width: 100,
+        //   height: 100,
+          child: CircleAvatar(
+            backgroundImage: AssetImage('assets/images/peacock.jpeg'),
+            backgroundColor: Colors.red,
+            radius: 150,
+            // child: Text('Name', style: TextStyle(color: Colors.white, fontSize: 50),),
+            // minRadius: 100,
+            // maxRadius: 200,
+          ),
+        // ),
+      ),
+
     );
   }
 }
