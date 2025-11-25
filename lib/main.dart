@@ -32,6 +32,9 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
 
+  var emailText = TextEditingController();
+  var passText = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
 
@@ -536,21 +539,136 @@ class _MyHomePageState extends State<MyHomePage> {
       //---Although we can make a similar widget from the ground up
       //---This widget comes in handy in the fast development of an application.
 
+      // body: Center(
+      //   //we can also use radius for increase the size of the circular avatar
+      //   // child: Container(
+      //   //   width: 100,
+      //   //   height: 100,
+      //     child: CircleAvatar(
+      //       backgroundImage: AssetImage('assets/images/peacock.jpeg'),
+      //       backgroundColor: Colors.red,
+      //       radius: 150,
+      //       // child: Text('Name', style: TextStyle(color: Colors.white, fontSize: 50),),
+      //       // minRadius: 100,
+      //       // maxRadius: 200,
+      //     ),
+      //   // ),
+      // ),
+
+
+      ///CardWidget
+
+      // body: Center(
+      //   child: Card(
+      //     shadowColor: Colors.orange,
+      //     elevation: 5,
+      //       child:
+      //       Padding(
+      //         padding: const EdgeInsets.all(8.0),
+      //         child:
+      //         Text(
+      //             "Hello Developer",
+      //                 style:
+      //                 TextStyle(
+      //                     fontSize: 25,
+      //
+      //                 ),
+      //         ),
+      //       )
+      //   ),
+      // ),
+
+
+      ///Adding Text Input Widgets(TextField)
+      // A TextField is an input element which hold the alphanumeric data, such as name, password, address etc
+      // Enable the user to enter text information using a programmable code
+
       body: Center(
-        //we can also use radius for increase the size of the circular avatar
-        // child: Container(
-        //   width: 100,
-        //   height: 100,
-          child: CircleAvatar(
-            backgroundImage: AssetImage('assets/images/peacock.jpeg'),
-            backgroundColor: Colors.red,
-            radius: 150,
-            // child: Text('Name', style: TextStyle(color: Colors.white, fontSize: 50),),
-            // minRadius: 100,
-            // maxRadius: 200,
-          ),
-        // ),
+          child:
+          Container(
+            width: 300,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  TextField(
+                    keyboardType: TextInputType.phone,
+                    controller: emailText,
+                    // enabled: false,
+
+                    decoration: InputDecoration(
+                      // hintText: 'Enter Email',
+                      hintText: 'Enter phone',
+                      focusedBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(11),
+                          borderSide: BorderSide(
+                              color: Colors.deepOrange,
+                            width: 2,
+                          )
+                      ),
+                      enabledBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(11),
+                        borderSide: BorderSide(
+                          color: Colors.blueAccent,
+                          width: 2
+                        )
+                      ),
+                      disabledBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(11),
+                          borderSide: BorderSide(
+                              color: Colors.black45,
+                              width: 2
+                          )
+                      ),
+                      // suffixText: "Username exits",
+                      suffixIcon: IconButton(
+                        icon: Icon(Icons.remove_red_eye, color: Colors.orange,),
+                        onPressed: (){
+
+                        },
+                      ),
+                      // prefixIcon: Icon(Icons.email, color: Colors.blueAccent,)
+                      prefixIcon: Icon(Icons.phone, color: Colors.blueAccent,)
+                    ),
+                  ),
+                  Container(height: 11,),
+                  TextField(
+                    controller: passText,
+                    obscureText: true,
+                    obscuringCharacter: '*',
+                    decoration: InputDecoration(
+                      hintText: 'Enter Password',
+                        border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(11),
+                            borderSide: BorderSide(
+                                color: Colors.deepOrange
+                            )
+
+                        )
+                    ),
+                  ),
+                  Container(height: 11,),
+                  ElevatedButton(
+
+                      onPressed: (){
+
+                        String uEmail = emailText.text.toString();
+                        String uPass = passText.text;
+
+                        print("Email: $uEmail, Pass: $uPass");
+
+                      },
+
+                      child: Text(
+                        'Login'
+                      )
+                  )
+                ],
+              )
+          )
       ),
+
+
+
 
     );
   }
