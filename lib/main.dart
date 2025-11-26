@@ -1,3 +1,4 @@
+import 'package:container_flutter_project/ui_helper/util.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -14,7 +15,12 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        // colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        textTheme: TextTheme(
+          headlineLarge: TextStyle(fontSize: 21, fontWeight: FontWeight.bold),
+          headlineMedium: TextStyle(fontSize: 15, fontWeight: FontWeight.w600,fontStyle: FontStyle.italic),
+        )
+
       ),
       home: const MyHomePage(title: 'Flutter Demo Home Page'),
     );
@@ -41,7 +47,8 @@ class _MyHomePageState extends State<MyHomePage> {
     var arrnames = ['Raman', 'Ramanujan', 'Rajesh', 'James', 'Johan', 'Rahim', 'Ram'];
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+        // backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+        backgroundColor: Colors.blue,
         title: Text(widget.title),
       ),
       ///Container & Center widget
@@ -557,16 +564,40 @@ class _MyHomePageState extends State<MyHomePage> {
 
 
       ///Custom Font in App
-      body: Center(
-        child: Text(
-            'Hello World',
-          style: TextStyle(
-            fontFamily: 'FontMain',
-            fontSize: 50,
-            fontWeight: FontWeight.w500,
+      // body: Center(
+      //   child: Text(
+      //       'Hello World',
+      //     style: TextStyle(
+      //       fontFamily: 'FontMain',
+      //       fontSize: 50,
+      //       fontWeight: FontWeight.w500,
+      //
+      //     ),
+      //   ),
+      // ),
 
+
+
+      ///Styles & Themes
+      body: Column(
+        children: [
+          Text(
+            'Hello World',
+            style: Theme.of(context).textTheme.headlineLarge!.copyWith(color: Colors.red),
           ),
-        ),
+          Text(
+            'Hello World',
+            style: Theme.of(context).textTheme.headlineMedium,
+          ),
+          Text(
+            'Hello World',
+            style: Theme.of(context).textTheme.headlineLarge!.copyWith(color: Colors.green),
+          ),
+          Text(
+            'Hello World',
+            style: mTextStyle11(textColor: Colors.red),
+          ),
+        ],
       ),
       
 

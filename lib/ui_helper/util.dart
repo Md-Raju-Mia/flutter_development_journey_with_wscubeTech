@@ -1,0 +1,21 @@
+import 'package:flutter/material.dart';
+
+TextStyle mTextStyle11({Color textColor = Colors.blue, FontWeight fontWeight = FontWeight.normal}){
+  return TextStyle(
+    fontSize: 11,
+    color: textColor,
+    fontWeight: fontWeight
+  );
+}
+
+TextStyle mTextStyle21(){
+  return TextStyle(
+      fontSize: 21
+  );
+}
+
+TextStyle mTextStyle16(){
+  return TextStyle(
+      fontSize: 16
+  );
+}
