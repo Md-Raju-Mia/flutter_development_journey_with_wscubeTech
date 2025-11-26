@@ -556,34 +556,52 @@ class _MyHomePageState extends State<MyHomePage> {
       // ),
 
 
+      ///Custom Font in App
+      body: Center(
+        child: Text(
+            'Hello World',
+          style: TextStyle(
+            fontFamily: 'FontMain',
+            fontSize: 50,
+            fontWeight: FontWeight.w500,
+
+          ),
+        ),
+      ),
+      
+
+
+
+
+
       ///CardWidget
 
-      // body: Center(
-      //   child: Card(
-      //     shadowColor: Colors.orange,
-      //     elevation: 5,
-      //       child:
-      //       Padding(
-      //         padding: const EdgeInsets.all(8.0),
-      //         child:
-      //         Text(
-      //             "Hello Developer",
-      //                 style:
-      //                 TextStyle(
-      //                     fontSize: 25,
-      //
-      //                 ),
-      //         ),
-      //       )
-      //   ),
-      // ),
+ /*     body: Center(
+        child: Card(
+          shadowColor: Colors.orange,
+          elevation: 5,
+            child:
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child:
+              Text(
+                  "Hello Developer",
+                      style:
+                      TextStyle(
+                          fontSize: 25,
+
+                      ),
+              ),
+            )
+        ),
+      ),*/
 
 
       ///Adding Text Input Widgets(TextField)
       // A TextField is an input element which hold the alphanumeric data, such as name, password, address etc
       // Enable the user to enter text information using a programmable code
 
-      body: Center(
+      /*body: Center(
           child:
           Container(
             width: 300,
@@ -665,7 +683,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 ],
               )
           )
-      ),
+      ),*/
 
 
 
