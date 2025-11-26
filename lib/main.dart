@@ -39,6 +39,10 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
 
+  callBack(){
+    print('Clicked!!!!!');
+  }
+
   var emailText = TextEditingController();
   var passText = TextEditingController();
 
@@ -925,7 +929,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
 
       ///Grid-view builder dynamic for unknown size of data
-      body: GridView.builder(itemBuilder: (context, index) {
+ /*     body: GridView.builder(itemBuilder: (context, index) {
         return Container(
           color: arrcolors[index],
         );
@@ -937,7 +941,20 @@ class _MyHomePageState extends State<MyHomePage> {
         mainAxisSpacing: 11
 
       ),
-      ),
+      ),*/
+
+
+      ///callBack function
+      // Data flow, Data passing
+    /*  body: ElevatedButton(
+          onPressed: callBack, child: Text('Click Me!!')),*/
+
+
+
+      ///Custom Widget
+      ///Spliting the app into widgets
+      //My created/build widgets
+
 
     );
   }
