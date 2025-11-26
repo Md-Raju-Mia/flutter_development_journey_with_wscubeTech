@@ -1,5 +1,6 @@
 import 'package:container_flutter_project/ui_helper/util.dart';
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 
 void main() {
   runApp(const MyApp());
@@ -720,7 +721,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
 
       ///Getting current Date & Time
-      body: Center(
+      /*body: Center(
         child: Container(
           width: 300,
           height: 300,
@@ -743,7 +744,39 @@ class _MyHomePageState extends State<MyHomePage> {
             ],
           ),
         ),
+      ),*/
+
+      ///Date Format Patterns
+      //import 'package:intl/intl.dart';   this package and it's dependency is required for formating date time
+      body: Center(
+        child: Container(
+          width: 300,
+          height: 300,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(
+                  // 'Current Time : ${time.hour}:${time.minute}:${time.second} ',
+                  // 'Current Time : ${DateFormat('Hms').format(time)} ',
+                  // 'Current Time : ${DateFormat('jms').format(time)} ',
+                  'Current Time : ${DateFormat('yMMMMd').format(time)} ',
+                      style: TextStyle(
+                      fontSize: 25,
+              ),
+              ),
+              ElevatedButton(
+                  onPressed: (){
+                    setState(() {
+
+                    });
+                  },
+                  child: Text('Current Time'))
+            ],
+          ),
+        ),
       ),
+
+
 
 
 
