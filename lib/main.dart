@@ -748,7 +748,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
       ///Date Format Patterns
       //import 'package:intl/intl.dart';   this package and it's dependency is required for formating date time
-      body: Center(
+   /*   body: Center(
         child: Container(
           width: 300,
           height: 300,
@@ -774,11 +774,55 @@ class _MyHomePageState extends State<MyHomePage> {
             ],
           ),
         ),
-      ),
+      ),*/
 
+      ///Showing a Date-Time Picker
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text(
+              'Select Date',
+              style: TextStyle(
+                  fontSize: 25
+              ),
+            ),
+            ElevatedButton(
+                onPressed: () async{
+                  DateTime? datePicked = await showDatePicker(
+                      context: context,
+                      initialDate: DateTime.now(),
+                      firstDate: DateTime(2020),
+                      lastDate: DateTime(2026),
+                  );
 
+                  if(datePicked!=null){
+                    print('Date selected: ${datePicked.day}-${datePicked.month}-${datePicked.year}');
+                  }
+                },
+                child: Text('Selected Date')
+            ),
+            ElevatedButton(
+                onPressed: () async{
+                  TimeOfDay? pickedTime  =await showTimePicker(
+                      context: context,
+                      initialTime: TimeOfDay.now(),
+                    initialEntryMode: TimePickerEntryMode.input,
+                    // initialEntryMode: TimePickerEntryMode.dial,
+                  );
 
+                  if(pickedTime!=null) {
+                    print('Time selected: ${pickedTime.hour}:${pickedTime
+                        .minute}');
+                  }
 
+                },
+                child: Text('Selected Time')
+            ),
+
+          ],
+        ),
+      )
 
 
     );
