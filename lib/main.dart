@@ -45,6 +45,8 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
 
     var arrnames = ['Raman', 'Ramanujan', 'Rajesh', 'James', 'Johan', 'Rahim', 'Ram'];
+
+    var time = DateTime.now();
     return Scaffold(
       appBar: AppBar(
         // backgroundColor: Theme.of(context).colorScheme.inversePrimary,
@@ -546,21 +548,21 @@ class _MyHomePageState extends State<MyHomePage> {
       //---Although we can make a similar widget from the ground up
       //---This widget comes in handy in the fast development of an application.
 
-      // body: Center(
-      //   //we can also use radius for increase the size of the circular avatar
-      //   // child: Container(
-      //   //   width: 100,
-      //   //   height: 100,
-      //     child: CircleAvatar(
-      //       backgroundImage: AssetImage('assets/images/peacock.jpeg'),
-      //       backgroundColor: Colors.red,
-      //       radius: 150,
-      //       // child: Text('Name', style: TextStyle(color: Colors.white, fontSize: 50),),
-      //       // minRadius: 100,
-      //       // maxRadius: 200,
-      //     ),
-      //   // ),
-      // ),
+      /*body: Center(
+        //we can also use radius for increase the size of the circular avatar
+        // child: Container(
+        //   width: 100,
+        //   height: 100,
+          child: CircleAvatar(
+            backgroundImage: AssetImage('assets/images/peacock.jpeg'),
+            backgroundColor: Colors.red,
+            radius: 150,
+            // child: Text('Name', style: TextStyle(color: Colors.white, fontSize: 50),),
+            // minRadius: 100,
+            // maxRadius: 200,
+          ),
+        // ),
+      ),*/
 
 
       ///Custom Font in App
@@ -579,26 +581,26 @@ class _MyHomePageState extends State<MyHomePage> {
 
 
       ///Styles & Themes
-      body: Column(
-        children: [
-          Text(
-            'Hello World',
-            style: Theme.of(context).textTheme.headlineLarge!.copyWith(color: Colors.red),
-          ),
-          Text(
-            'Hello World',
-            style: Theme.of(context).textTheme.headlineMedium,
-          ),
-          Text(
-            'Hello World',
-            style: Theme.of(context).textTheme.headlineLarge!.copyWith(color: Colors.green),
-          ),
-          Text(
-            'Hello World',
-            style: mTextStyle11(textColor: Colors.red),
-          ),
-        ],
-      ),
+      // body: Column(
+      //   children: [
+      //     Text(
+      //       'Hello World',
+      //       style: Theme.of(context).textTheme.headlineLarge!.copyWith(color: Colors.red),
+      //     ),
+      //     Text(
+      //       'Hello World',
+      //       style: Theme.of(context).textTheme.headlineMedium,
+      //     ),
+      //     Text(
+      //       'Hello World',
+      //       style: Theme.of(context).textTheme.headlineLarge!.copyWith(color: Colors.green),
+      //     ),
+      //     Text(
+      //       'Hello World',
+      //       style: mTextStyle11(textColor: Colors.red),
+      //     ),
+      //   ],
+      // ),
       
 
 
@@ -715,6 +717,33 @@ class _MyHomePageState extends State<MyHomePage> {
               )
           )
       ),*/
+
+
+      ///Getting current Date & Time
+      body: Center(
+        child: Container(
+          width: 300,
+          height: 300,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(
+                  'Current Time : ${time.hour}:${time.minute}:${time.second} ',
+                      style: TextStyle(
+                      fontSize: 25,
+              ),
+              ),
+              ElevatedButton(
+                  onPressed: (){
+                    setState(() {
+                      
+                    });
+                  }, 
+                  child: Text('Current Time'))
+            ],
+          ),
+        ),
+      ),
 
 
 
