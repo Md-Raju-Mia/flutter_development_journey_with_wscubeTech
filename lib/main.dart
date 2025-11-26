@@ -46,6 +46,17 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
 
     var arrnames = ['Raman', 'Ramanujan', 'Rajesh', 'James', 'Johan', 'Rahim', 'Ram'];
+    
+    var arrcolors = [
+      Colors.red,
+      Colors.orange,
+      Colors.grey,
+      Colors.blue,
+      Colors.pink,
+      Colors.green,
+      Colors.purpleAccent,
+      Colors.brown,
+    ];
 
     var time = DateTime.now();
     return Scaffold(
@@ -777,7 +788,7 @@ class _MyHomePageState extends State<MyHomePage> {
       ),*/
 
       ///Showing a Date-Time Picker
-      body: Center(
+      /*body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
@@ -822,8 +833,111 @@ class _MyHomePageState extends State<MyHomePage> {
 
           ],
         ),
-      )
+      )*/
 
+
+      ///Grid-View with container
+      // body: Container(
+      //   width: 300,
+      //   child: GridView.count(crossAxisCount: 4,
+      //   children: [
+      //     Padding(
+      //       padding: const EdgeInsets.all(8.0),
+      //       child: Container(color: arrcolors[0]),
+      //     ),
+      //     Padding(
+      //       padding: const EdgeInsets.all(8.0),
+      //       child: Container(color: arrcolors[1]),
+      //     ),
+      //     Padding(
+      //       padding: const EdgeInsets.all(8.0),
+      //       child: Container(color: arrcolors[2]),
+      //     ),
+      //     Padding(
+      //       padding: const EdgeInsets.all(8.0),
+      //       child: Container(color: arrcolors[3]),
+      //     ),
+      //     Padding(
+      //       padding: const EdgeInsets.all(8.0),
+      //       child: Container(color: arrcolors[4]),
+      //     ),
+      //     Padding(
+      //       padding: const EdgeInsets.all(8.0),
+      //       child: Container(color: arrcolors[5]),
+      //     ),
+      //     Padding(
+      //       padding: const EdgeInsets.all(8.0),
+      //       child: Container(color: arrcolors[6]),
+      //     ),
+      //     Padding(
+      //       padding: const EdgeInsets.all(8.0),
+      //       child: Container(color: arrcolors[7]),
+      //     ),
+      //   ],
+      //   ),
+      // )
+
+
+
+
+
+      ///Grid-View without container and padding
+    /*    body: Column(
+          children: [
+            Container(
+              height: 200,
+              child: GridView.count(
+                crossAxisCount: 4,
+                crossAxisSpacing: 11,
+                mainAxisSpacing: 11,
+                children: [
+                  Container(color: arrcolors[0]),
+                  Container(color: arrcolors[1]),
+                  Container(color: arrcolors[2]),
+                  Container(color: arrcolors[3]),
+                  Container(color: arrcolors[4]),
+                  Container(color: arrcolors[5]),
+                  Container(color: arrcolors[6]),
+                  Container(color: arrcolors[7]),
+                ],
+              ),
+            ),
+
+              //use gridview.extent when you want to show your grid based on screen size..
+          *//*    child: GridView.extent(
+                maxCrossAxisExtent: 100,
+                crossAxisSpacing: 11,
+                mainAxisSpacing: 11,
+                children: [
+                  Container(color: arrcolors[0]),
+                  Container(color: arrcolors[1]),
+                  Container(color: arrcolors[2]),
+                  Container(color: arrcolors[3]),
+                  Container(color: arrcolors[4]),
+                  Container(color: arrcolors[5]),
+                  Container(color: arrcolors[6]),
+                  Container(color: arrcolors[7]),
+                ],
+              ),*//*
+
+          ],
+        )*/
+
+
+      ///Grid-view builder dynamic for unknown size of data
+      body: GridView.builder(itemBuilder: (context, index) {
+        return Container(
+          color: arrcolors[index],
+        );
+
+      }, itemCount: arrcolors.length, gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+        //if you want the fix size box but count is not fix for each row then you can take "SliverGridDelegateWithMaxCrossAxisExtent
+          crossAxisCount: 3,
+        crossAxisSpacing: 11,
+        mainAxisSpacing: 11
+
+      ),
+      ),
 
     );
   }
