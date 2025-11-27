@@ -1,8 +1,9 @@
 import 'package:container_flutter_project/ui_helper/util.dart';
+import 'package:container_flutter_project/widgets/rounded_btn.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
-void main() {
+/*void main() {
   runApp(const MyApp());
 }
 
@@ -68,7 +69,10 @@ class _MyHomePageState extends State<MyHomePage> {
         // backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         backgroundColor: Colors.blue,
         title: Text(widget.title),
-      ),
+      ),*/
+
+
+
       ///Container & Center widget
       // body: Center(
       //   child: Container(
@@ -956,6 +960,367 @@ class _MyHomePageState extends State<MyHomePage> {
       //My created/build widgets
 
 
+
+
+/*
     );
   }
 }
+*/
+
+
+
+///--------------------------------------------------------------------------------------------------
+// void main() {
+//   runApp(const MyApp());
+// }
+//
+// class MyApp extends StatelessWidget {
+//   const MyApp({super.key});
+//
+//   // This widget is the root of your application.
+//   @override
+//   Widget build(BuildContext context) {
+//     return MaterialApp(
+//       title: 'Flutter Demo',
+//       theme: ThemeData(
+//
+//         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+//       ),
+//       home: MyHomePage(),
+//     );
+//   }
+// }
+//
+// class MyHomePage extends StatelessWidget {
+//   const MyHomePage({super.key});
+//
+//
+//   @override
+//   Widget build(BuildContext context) {
+//
+//     return Scaffold(
+//       appBar: AppBar(
+//
+//         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+//
+//         title: Text('Custom Widget'),
+//       ),
+//       body: Container(
+//         child: Column(
+//           children: [
+//
+//             CatItems(),
+//             Contact(),
+//             SubCatItems(),
+//             BottomMenu(),
+//
+//
+//
+//
+//
+//
+//
+//         ],
+//         ),
+//
+//       )  );
+//   }
+// }
+//
+// class CatItems extends StatelessWidget{
+//   @override
+//   Widget build(BuildContext context) {
+//     return   Expanded(
+//       flex: 2,
+//       child: Container(
+//         color: Colors.blue,
+//         child: ListView.builder(itemBuilder: (context,index) =>
+//             Padding(
+//               padding: const EdgeInsets.all(11.0),
+//               child: SizedBox(
+//                 width: 100,
+//                 child: CircleAvatar(
+//                   backgroundColor: Colors.green,
+//                 ),
+//               ),
+//             ), itemCount: 10, scrollDirection: Axis.horizontal),
+//       ),
+//     );
+//   }
+//
+// }
+//
+// class Contact extends StatelessWidget {
+//   const Contact({super.key});
+//
+//   @override
+//   Widget build(BuildContext context) {
+//     return Expanded(
+//       flex: 4,
+//       child: Container(
+//         color: Colors.orange,
+//         child: ListView.builder(
+//           itemCount: 10,  // builder length
+//           itemBuilder: (context,index){
+//             return Padding(
+//               padding: const EdgeInsets.all(8.0),
+//               child: ListTile(
+//                 leading: CircleAvatar(
+//                   backgroundColor: Colors.green,
+//                 ),
+//                 title: Text('Name'),
+//                 subtitle: Text('Mob No'),
+//                 trailing: Icon(Icons.delete),
+//               ),
+//             );
+//           },
+//         ),
+//       ),
+//     );
+//   }
+// }
+//
+// class SubCatItems extends StatelessWidget {
+//   const SubCatItems({super.key});
+//
+//   @override
+//   Widget build(BuildContext context) {
+//     return    Expanded(
+//       flex: 2,
+//       child: Container(
+//         color: Colors.blueGrey,
+//         child: ListView.builder(
+//           itemCount: 10,
+//           scrollDirection: Axis.horizontal,
+//           // itemBuilder: (context, index)=>
+//           //     Padding(
+//           //         padding: const EdgeInsets.all(8.0),
+//           //       child: Container(
+//           //         width: 200,
+//           //         decoration: BoxDecoration(
+//           //           borderRadius: BorderRadius.circular(11),
+//           //           color: Colors.blue,
+//           //         ),
+//           //       ),
+//           //     )
+//           itemBuilder: (context, index) {
+//             return Padding(
+//               padding: const EdgeInsets.all(8.0),
+//               child: Container(
+//                 width: 200,
+//                 decoration: BoxDecoration(
+//                   borderRadius: BorderRadius.circular(11),
+//                   color: Colors.blue,
+//                 ),
+//               ),
+//             );
+//           },
+//         ),
+//       ),
+//     );
+//   }
+// }
+//
+//
+// class BottomMenu extends StatelessWidget {
+//   const BottomMenu({super.key});
+//
+//   @override
+//   Widget build(BuildContext context) {
+//     return Expanded(
+//       flex: 2,
+//       child: Container(
+//         color: Colors.green,
+//         child: GridView.count(
+//           crossAxisCount: 4, // 4 columns
+//           children: [
+//             Padding(
+//               padding: const EdgeInsets.all(8.0),
+//               child: Container(
+//                 decoration: BoxDecoration(
+//                   borderRadius: BorderRadius.circular(11),
+//                   color: Colors.red,
+//                 ),
+//               ),
+//             ),
+//             Padding(
+//               padding: const EdgeInsets.all(8.0),
+//               child: Container(
+//                 decoration: BoxDecoration(
+//                   borderRadius: BorderRadius.circular(11),
+//                   color: Colors.red,
+//                 ),
+//               ),
+//             ),
+//             Padding(
+//               padding: const EdgeInsets.all(8.0),
+//               child: Container(
+//                 decoration: BoxDecoration(
+//                   borderRadius: BorderRadius.circular(11),
+//                   color: Colors.red,
+//                 ),
+//               ),
+//             ),
+//             Padding(
+//               padding: const EdgeInsets.all(8.0),
+//               child: Container(
+//                 decoration: BoxDecoration(
+//                   borderRadius: BorderRadius.circular(11),
+//                   color: Colors.red,
+//                 ),
+//               ),
+//             ),
+//           ],
+//         ),
+//       ),
+//     );
+//
+//
+//
+//   }
+// }
+//
+
+
+/// Stack Widget
+//A widget that positions its children relative to the edges of its box.
+//This class is useful if you want to overlap several children in a  simple way,
+//For example having some text and an image, overlaid with a gradient and a button attached to the bottom.
+
+/*void main(){
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Stack Widget Learning',
+      theme: ThemeData(
+          textTheme: TextTheme(
+            headlineLarge: TextStyle(fontSize: 21, fontWeight: FontWeight.bold),
+            headlineMedium: TextStyle(fontSize: 15, fontWeight: FontWeight.w600,fontStyle: FontStyle.italic),
+          )
+      ),
+      home: const MyHomePage(title: 'Stack Widget Learning'),
+    );
+  }
+}
+
+
+class MyHomePage extends StatefulWidget {
+  const MyHomePage({super.key, required this.title});
+
+  final String title;
+
+  @override
+  State<MyHomePage> createState() => _MyHomePageState();
+}
+
+class _MyHomePageState extends State<MyHomePage> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.orange,
+        title: Text('Hello world'),
+      ),
+      body: Container(
+        height: 300,
+        width: 300,
+        child: Stack(
+          children: [
+            Container(
+              width: 200,
+              height: 200,
+              color: Colors.blueGrey,
+            ),
+            Container(
+              width: 160,
+              height: 160,
+              color: Colors.grey,
+            ),
+            Positioned(
+              left: 21,
+              top: 21,
+              child: Container(
+                width: 130,
+                height: 130,
+                color: Colors.greenAccent,
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}*/
+
+
+
+///Creating a new custom widget
+
+void main(){
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: 'Creating a new custom widget',
+
+      theme: ThemeData(
+
+      ),
+      home: const MyHomePage(title: 'Creating a New Custom Widget'),
+    );
+  }
+}
+
+
+
+class MyHomePage extends StatefulWidget {
+  final String title;
+  const MyHomePage({super.key, required this.title});
+
+  @override
+  State<MyHomePage> createState() => _MyHomePageState();
+}
+
+class _MyHomePageState extends State<MyHomePage> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(widget.title),
+        centerTitle: true,
+      ),
+      body: Center(
+        child: Container(
+          width: 100,
+          child: RoundedButton(
+            btnName: 'Login',
+            icon: Icon(Icons.lock),
+            callback: (){
+              print('Login in!!');
+            },
+            textStyle: mTextStyle16(),
+          ),
+        ),
+      )
+    );
+  }
+}
+
+
+
+
+
+
