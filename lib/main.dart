@@ -2,6 +2,7 @@ import 'package:container_flutter_project/ui_helper/util.dart';
 import 'package:container_flutter_project/widgets/rounded_btn.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 /*void main() {
   runApp(const MyApp());
@@ -1499,7 +1500,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
 
 ///Rich Text Widget
-void main(){
+/*void main(){
   runApp(MyApp());
 }
 
@@ -1594,7 +1595,139 @@ class _MyHomePageState extends State<MyHomePage> {
 
     );
   }
+}*/
+
+
+/** --------------------------------------------------------------------------------*/
+
+
+///Icon Widgets
+/*
+void main(){
+  runApp(MyApp());
 }
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+
+      home: const MyHomePage(),
+    );
+  }
+}
+
+
+class MyHomePage extends StatefulWidget {
+  const MyHomePage({super.key});
+
+  @override
+  State<MyHomePage> createState() => _MyHomePageState();
+}
+
+class _MyHomePageState extends State<MyHomePage> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        appBar: AppBar(
+          centerTitle: true,
+          title: Text("Hello Icon Widgets",
+            style: TextStyle(
+              color: Colors.white,
+              fontSize: 21,
+              fontWeight: FontWeight.w700,
+            ),),
+          backgroundColor: Colors.red,
+        ),
+
+        body: Center(
+            child: Icon(
+                // Icons.add_business_rounded,
+                Icons.play_circle_outline,
+              size: 100,
+              color: Colors.green,
+            )
+        ),
+
+
+
+
+    );
+  }
+}
+
+
+
+*/
+
+/**---------------------------------------------------------------------------------------*/
+
+///AWESOME ICON
+///Go to the website : font awsome flutter- Search it on google,
+///Then click on the "Installing" copy the dependency for this page
+///Add the copied dependency to the pubspec.yaml file
+///Also copy the import package line form that page and paste it to your project file.
+void main(){
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+
+      home: const MyHomePage(),
+    );
+  }
+}
+
+
+class MyHomePage extends StatefulWidget {
+  const MyHomePage({super.key});
+
+  @override
+  State<MyHomePage> createState() => _MyHomePageState();
+}
+
+class _MyHomePageState extends State<MyHomePage> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        centerTitle: true,
+        title: Text("Hello Awesome Icon",
+          style: TextStyle(
+            color: Colors.white,
+            fontSize: 21,
+            fontWeight: FontWeight.w700,
+          ),),
+        backgroundColor: Colors.red,
+      ),
+
+      body:  Center(
+          child: Row(
+            children: [
+              Icon(
+                // Icons.add_business_rounded,
+                Icons.play_circle_outline,
+                size: 100,
+                color: Colors.green,
+              ),
+              SizedBox(width: 20,),
+              FaIcon(FontAwesomeIcons.amazon, color: Colors.orange,size: 100,)
+            ],
+          )
+      ),
+    );
+  }
+}
+
 
 
 
