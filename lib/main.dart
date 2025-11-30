@@ -1263,10 +1263,10 @@ class _MyHomePageState extends State<MyHomePage> {
 
 ///Creating a new custom widget
 
-void main(){
+/*void main(){
   runApp(MyApp());
 }
-
+ 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
@@ -1315,6 +1315,283 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
         ),
       )
+    );
+  }
+}*/
+
+/**----------------------------------------------------------------------------*/
+///Wrap Widget in Flutter
+
+/*
+void main(){
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+
+      home: const MyHomePage(),
+    );
+  }
+}
+
+
+class MyHomePage extends StatefulWidget {
+  const MyHomePage({super.key});
+
+  @override
+  State<MyHomePage> createState() => _MyHomePageState();
+}
+
+class _MyHomePageState extends State<MyHomePage> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.green,
+        centerTitle: true,
+        title: Text(
+            'Wrap Widget',
+          style: TextStyle(
+            color: Colors.white,
+            fontSize: 21,
+            fontWeight: FontWeight.w800,
+          ),
+        ),
+      ),
+
+
+      body: Container(
+        width: double.infinity,
+        height: double.infinity,
+        child: Wrap(
+          direction: Axis.vertical,
+          // direction: Axis.horizontal,
+            // alignment: WrapAlignment.
+          //
+          // center,
+            // alignment: WrapAlignment.spaceEvenly,
+            // alignment: WrapAlignment.spaceBetween,
+            alignment: WrapAlignment.spaceAround,
+            runSpacing: 11,
+            spacing: 11,
+            children: [
+              Container(
+                width: 100,
+                height: 100,
+                color: Colors.deepOrange,
+              ),
+              Container(
+                width: 100,
+                height: 100,
+                color: Colors.blue,
+              ),
+              Container(
+                width: 100,
+                height: 100,
+                color: Colors.green,
+              ),
+              Container(
+                width: 100,
+                height: 100,
+                color: Colors.red,
+              ),
+              Container(
+                width: 100,
+                height: 100,
+                color: Colors.purple,
+              ),
+              Container(
+                width: 100,
+                height: 100,
+                color: Colors.pink,
+              ),
+              Container(
+                width: 100,
+                height: 100,
+                color: Colors.yellow,
+              ),
+              Container(
+                width: 100,
+                height: 100,
+                color: Colors.grey,
+              ),
+            ],
+
+        ),
+      ),
+    );
+  }
+}
+*/
+
+
+/**------------------------------------------------------------------------------*/
+
+///SizedBox
+/*
+void main(){
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+
+      home: const MyHomePage(),
+    );
+  }
+}
+
+
+class MyHomePage extends StatefulWidget {
+  const MyHomePage({super.key});
+
+  @override
+  State<MyHomePage> createState() => _MyHomePageState();
+}
+
+class _MyHomePageState extends State<MyHomePage> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        centerTitle: true,
+        title: Text("Hello SizedBox",
+        style: TextStyle(
+          color: Colors.white,
+          fontSize: 21,
+          fontWeight: FontWeight.w700,
+        ),),
+        backgroundColor: Colors.blue,
+      ),
+
+      //SizedBox has only, child, height and width
+      body: Center(
+        child: SizedBox(
+          width: 200,
+          height: 34,
+          child: ElevatedButton(
+              onPressed: (){
+
+              },
+            style: ElevatedButton.styleFrom(
+              backgroundColor: Colors.green,
+              foregroundColor: Colors.white,
+            ),
+              child: Text('Click'),
+          ),
+        ),
+      ),
+    );
+  }
+}
+*/
+
+
+///Rich Text Widget
+void main(){
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+
+      home: const MyHomePage(),
+    );
+  }
+}
+
+
+class MyHomePage extends StatefulWidget {
+  const MyHomePage({super.key});
+
+  @override
+  State<MyHomePage> createState() => _MyHomePageState();
+}
+
+class _MyHomePageState extends State<MyHomePage> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        centerTitle: true,
+        title: Text("Hello SizedBox",
+          style: TextStyle(
+            color: Colors.white,
+            fontSize: 21,
+            fontWeight: FontWeight.w700,
+          ),),
+        backgroundColor: Colors.red,
+      ),
+      
+      // body: Row(
+      //   children: [
+      //     Text(
+      //       'Hello',
+      //       style: TextStyle(
+      //           fontSize: 16,
+      //           color: Colors.grey
+      //       ),
+      //     ),
+      //     Text(
+      //       'World',
+      //       style: TextStyle(
+      //       fontSize: 34,
+      //       color: Colors.blue,
+      //         fontWeight: FontWeight.bold,
+      //     ),
+      //     ),
+      //   ],
+      // ),
+
+      ///simple way of taking rich text is
+      body: Center(
+        child: RichText(
+            text: TextSpan(
+              style: TextStyle(
+                color: Colors.grey,
+                fontSize: 21
+              ),
+              children: <TextSpan>[
+                TextSpan(text: 'Hello '),
+                TextSpan(text: 'World!', style: TextStyle(
+                  fontSize:28,
+                  color: Colors.blue,
+                  fontWeight: FontWeight.bold,
+                )
+                ),
+                TextSpan(text: ' Welcome to '),
+                TextSpan(
+                    text: 'Flutter.',
+                  style: TextStyle(
+                    fontSize: 28,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.green,
+                    fontFamily: 'FontMain',
+                  )
+                )
+
+              ]
+
+            ),
+        ),
+      )
+
     );
   }
 }
