@@ -1733,6 +1733,7 @@ class _MyHomePageState extends State<MyHomePage> {
 /**---------------------------------------------------------------------*/
 
 
+/*
 ///Positioned Widget
 void main(){
   runApp(MyApp());
@@ -1797,6 +1798,124 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 }
+*/
+
+/**---------------------------------------------------------------------------*/
+///Counter App with setState
+
+void main(){
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      
+      home: MyHomePage(),
+    );
+  }
+}
+
+
+class MyHomePage extends StatefulWidget {
+  const MyHomePage({super.key});
+
+  @override
+  State<MyHomePage> createState() => _MyHomePageState();
+}
+
+class _MyHomePageState extends State<MyHomePage> {
+  var _count=0;
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.purpleAccent,
+        title: Center(
+          child: Text("Hello Counter App!", style: TextStyle(
+            color: Colors.white,
+            fontSize: 21,
+            fontWeight: FontWeight.w700,
+          ),
+          ),
+        ),
+      ),
+
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text("Count: $_count", style: TextStyle(
+              fontSize: 34,
+              fontWeight: FontWeight.bold,
+              color: Colors.blue,
+            ),
+            ),
+            SizedBox(
+              height: 10,
+            ),
+            Padding(
+              padding: const EdgeInsets.all(16.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Expanded(
+                    child: ElevatedButton(
+                        onPressed: (){
+
+
+                          setState(() {
+                            _count++;
+                          });
+
+                    },
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.purpleAccent,
+                        foregroundColor: Colors.white,
+                      ),
+                      child: Text('Increase Count', style: TextStyle(
+                          fontSize: 14,
+                          fontWeight: FontWeight.bold,
+                        ),),
+                    ),
+                  ),
+                  SizedBox(
+                    width: 10,
+                  ),
+                  Expanded(
+                    child: ElevatedButton(
+                      onPressed: (){
+
+
+                        setState(() {
+                          _count--;
+                        });
+
+                      },
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.purpleAccent,
+                        foregroundColor: Colors.white,
+                      ),
+                      child: Text('Decrease Count', style: TextStyle(
+                        fontSize: 14,
+                        fontWeight: FontWeight.bold,
+                      ),),
+                    ),
+                  ),
+                ],
+              ),
+            )
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+/**--------------------------------------------------------------------------------------*/
 
 
 
