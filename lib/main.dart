@@ -72,106 +72,100 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text(widget.title),
       ),*/
 
+///Container & Center widget
+// body: Center(
+//   child: Container(
+//     width: 300,
+//     height: 100,
+//     color: Colors.grey,
+//     child: Center(child: Text("This is center of Container", style: TextStyle(color: Colors.white),)),
+//
+//   ),
+// ),
 
+///Text widget
+// body: Text('Hello Flutter Devs', style: TextStyle(
+//   fontSize: 25,
+//   color: Colors.red,
+//   fontWeight: FontWeight.w500,
+//   backgroundColor: Colors.greenAccent,
+//
+// ),
+// ),
 
-      ///Container & Center widget
-      // body: Center(
-      //   child: Container(
-      //     width: 300,
-      //     height: 100,
-      //     color: Colors.grey,
-      //     child: Center(child: Text("This is center of Container", style: TextStyle(color: Colors.white),)),
-      //
-      //   ),
-      // ),
-      
-      
-      ///Text widget
-      // body: Text('Hello Flutter Devs', style: TextStyle(
-      //   fontSize: 25,
-      //   color: Colors.red,
-      //   fontWeight: FontWeight.w500,
-      //   backgroundColor: Colors.greenAccent,
-      //
-      // ),
-      // ),
+///Button widget
+///Text Button
+// body: TextButton(
+//     child: Text('Click here!!'),
+//     onPressed: (){
+//       print('Text Button Tapped!');
+//     },
+//   onLongPress: (){
+//       print('Are you want to delete the chat');
+//   },
+// ),
 
-      ///Button widget
-      ///Text Button
-      // body: TextButton(
-      //     child: Text('Click here!!'),
-      //     onPressed: (){
-      //       print('Text Button Tapped!');
-      //     },
-      //   onLongPress: (){
-      //       print('Are you want to delete the chat');
-      //   },
-      // ),
+///ElevatedButton (shadow button)
+// body: ElevatedButton(
+//     child: Text('Elevated Button'),
+//
+//   onPressed: (){
+//       print('Eleveted button pressed');
+//   },
+// ),
 
+///Outlined Button
+// body: OutlinedButton(
+//     child: Text('Outlined Button'),
+//
+//   onPressed: (){
+//       print('Outlined Button Pressed');
+//   },
+// ),
 
-      ///ElevatedButton (shadow button)
-      // body: ElevatedButton(
-      //     child: Text('Elevated Button'),
-      //
-      //   onPressed: (){
-      //       print('Eleveted button pressed');
-      //   },
-      // ),
+///Add Image In App
+///Steps:
+//1. First Create a folder name assets under project.
+// a. write click one your project -->
+// b. go new and select Directory
+// c. name the directory assets.
+//2. Inside this assets directory you can keep your image, fonts which is used my your app
+// a. write click one your assets folder.
+// b. go new and select Directory
+// c. name the directory as images
+//3. Now copy and paste your images inside this images folder.
 
-      ///Outlined Button
-      // body: OutlinedButton(
-      //     child: Text('Outlined Button'),
-      //
-      //   onPressed: (){
-      //       print('Outlined Button Pressed');
-      //   },
-      // ),
+///For image pubspec.yml file is important for declare the image specification
+//4. For assets declaration of pubspec we have to consider some important case
+// a. uncomment the assets related code
+// b. kip the assets keyword in the position where # is started.
+// c. the images/ line are which started on '-' are take it's positon on
+//    the 3rd letter of "assets" it means from char 's' they will take their place
+// d. declare the path as :
+///           # To add assets to your application, add an assets section, like this:
+///           assets:
+///             - assets/images/
+// This above diclaration will take all the access of the images which is on the images folder.
 
+/// After setting correctly the assets configuration inside pubspec.yaml
+/// if you still see any issues to see the image on your screen, just run
+/// the below commands
+//  1. flutter clean
+//  2. flutter pub get
+//  3. flutter run
 
+// body: Center(
+//     child: Container(
+//         width: 100 ,
+//         height: 100,
+//         child: Image.asset('assets/images/peacock.jpeg')
+//     )
+// ),
 
-      ///Add Image In App
-      ///Steps:
-      //1. First Create a folder name assets under project.
-            // a. write click one your project -->
-            // b. go new and select Directory
-            // c. name the directory assets.
-      //2. Inside this assets directory you can keep your image, fonts which is used my your app
-            // a. write click one your assets folder.
-            // b. go new and select Directory
-            // c. name the directory as images
-      //3. Now copy and paste your images inside this images folder.
+/// Column & Row
 
-      ///For image pubspec.yml file is important for declare the image specification
-      //4. For assets declaration of pubspec we have to consider some important case
-            // a. uncomment the assets related code
-            // b. kip the assets keyword in the position where # is started.
-            // c. the images/ line are which started on '-' are take it's positon on
-            //    the 3rd letter of "assets" it means from char 's' they will take their place
-            // d. declare the path as :
-            ///           # To add assets to your application, add an assets section, like this:
-            ///           assets:
-            ///             - assets/images/
-            // This above diclaration will take all the access of the images which is on the images folder.
-
-            /// After setting correctly the assets configuration inside pubspec.yaml
-            /// if you still see any issues to see the image on your screen, just run
-            /// the below commands
-            //  1. flutter clean
-            //  2. flutter pub get
-            //  3. flutter run
-
-      // body: Center(
-      //     child: Container(
-      //         width: 100 ,
-      //         height: 100,
-      //         child: Image.asset('assets/images/peacock.jpeg')
-      //     )
-      // ),
-
-        /// Column & Row
-
-      /// Column
-     /* body: Container(
+/// Column
+/* body: Container(
         ///horizontal width for Row
         width: 300,
 
@@ -207,8 +201,9 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
       ),
 */
-      ///Row
-      /*body: Container(
+
+///Row
+/*body: Container(
         ///horizontal width for Row
         // width: 300,
 
@@ -243,10 +238,9 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
       ),*/
 
+/// Inkwell widget: It responds to the touch action as performed by the user.
 
-      /// Inkwell widget: It responds to the touch action as performed by the user.
-
-     /* body: Center(
+/* body: Center(
         child: InkWell(
           onTap: (){
             print('Tapped on Container');
@@ -279,11 +273,10 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
       ),*/
 
+///SCROLLVIEW AND ITS TYPES
+///Vertical + Horizontal
 
-      ///SCROLLVIEW AND ITS TYPES
-      ///Vertical + Horizontal
-
-      /*body: Padding(
+/*body: Padding(
         padding: const EdgeInsets.all(8.0),
         child: SingleChildScrollView(
 
@@ -364,9 +357,9 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
       ),*/
 
-   ///List view Horizontal
+///List view Horizontal
 
-   /*   body: ListView(
+/*   body: ListView(
         scrollDirection: Axis.horizontal,
         reverse: true,
         children: [
@@ -393,8 +386,7 @@ class _MyHomePageState extends State<MyHomePage> {
         ],
       )*/
 
-
-      ///List view for fetch api data
+///List view for fetch api data
 /*      body: ListView.builder(itemBuilder: (context, index){
         return Text(arrnames[index], style: TextStyle(fontSize: 21, fontWeight: FontWeight.w500),);
       },
@@ -405,8 +397,8 @@ class _MyHomePageState extends State<MyHomePage> {
         scrollDirection: Axis.horizontal,
       )*/
 
-    ///ListView Separated
-       /* body: ListView.separated(itemBuilder: (context, index){
+///ListView Separated
+/* body: ListView.separated(itemBuilder: (context, index){
           return Text(arrnames[index], style: TextStyle(fontSize: 21, fontWeight: FontWeight.w500),);
         },
 
@@ -416,8 +408,8 @@ class _MyHomePageState extends State<MyHomePage> {
           },
         )*/
 
-      ///Try to desing a listview format
- /*       body: ListView.separated(itemBuilder: (context, index){
+///Try to desing a listview format
+/*       body: ListView.separated(itemBuilder: (context, index){
           return Row(
             children: [
             Padding(
@@ -447,10 +439,10 @@ class _MyHomePageState extends State<MyHomePage> {
           },
         )*/
 
-      ///Adding Decoration to Container
-      /** Inside Container you can't use decoration and color both together,
-       * If you want to use color then you have to use it inside decoration.*/
-      /*body: Container(
+///Adding Decoration to Container
+/** Inside Container you can't use decoration and color both together,
+ * If you want to use color then you have to use it inside decoration.*/
+/*body: Container(
         width: double.infinity,
         height: double.infinity,
         // color: Colors.blue.shade50,
@@ -482,9 +474,8 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
       ),*/
 
-
-      ///Expanded Widget
-   /*   body: Row(
+///Expanded Widget
+/*   body: Row(
         // mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Container(
@@ -519,18 +510,17 @@ class _MyHomePageState extends State<MyHomePage> {
         ],
       ),*/
 
-      ///Margin & Padding
+///Margin & Padding
 
-      /*** Padding ***/
-    /*  body: Padding(
+/*** Padding ***/
+/*  body: Padding(
         // padding: const EdgeInsets.all(8.0),   /// Give padding same for all 4 side
         padding: EdgeInsets.only(top:11, left: 34), // Give padding for your selected side
         child: Text('Hello World!', style: TextStyle(fontSize: 25),),
       ),*/
-      
-      
-      /*** Margin ***/
-      /*body: Container(
+
+/*** Margin ***/
+/*body: Container(
           color: Colors.blueGrey,
           margin: EdgeInsets.all(11),
           child: Padding(
@@ -545,9 +535,9 @@ class _MyHomePageState extends State<MyHomePage> {
           )
       ),*/
 
-      ///List Tile
-        ///we can remove leading, title, subtitle, trailing based on our design needs
-       /*body: ListView.separated(itemBuilder: (context, index){
+///List Tile
+///we can remove leading, title, subtitle, trailing based on our design needs
+/*body: ListView.separated(itemBuilder: (context, index){
           return ListTile(
             leading: Text('${index+1}'),
             title: Text(arrnames[index]),
@@ -562,14 +552,13 @@ class _MyHomePageState extends State<MyHomePage> {
           },
         )*/
 
+///Circle-Avatar
+//---It is simply a circle in which we can add background color, background image or just some text
+//---It usually represents a user with his image or with his initials.
+//---Although we can make a similar widget from the ground up
+//---This widget comes in handy in the fast development of an application.
 
-      ///Circle-Avatar
-      //---It is simply a circle in which we can add background color, background image or just some text
-      //---It usually represents a user with his image or with his initials.
-      //---Although we can make a similar widget from the ground up
-      //---This widget comes in handy in the fast development of an application.
-
-      /*body: Center(
+/*body: Center(
         //we can also use radius for increase the size of the circular avatar
         // child: Container(
         //   width: 100,
@@ -585,52 +574,44 @@ class _MyHomePageState extends State<MyHomePage> {
         // ),
       ),*/
 
+///Custom Font in App
+// body: Center(
+//   child: Text(
+//       'Hello World',
+//     style: TextStyle(
+//       fontFamily: 'FontMain',
+//       fontSize: 50,
+//       fontWeight: FontWeight.w500,
+//
+//     ),
+//   ),
+// ),
 
-      ///Custom Font in App
-      // body: Center(
-      //   child: Text(
-      //       'Hello World',
-      //     style: TextStyle(
-      //       fontFamily: 'FontMain',
-      //       fontSize: 50,
-      //       fontWeight: FontWeight.w500,
-      //
-      //     ),
-      //   ),
-      // ),
+///Styles & Themes
+// body: Column(
+//   children: [
+//     Text(
+//       'Hello World',
+//       style: Theme.of(context).textTheme.headlineLarge!.copyWith(color: Colors.red),
+//     ),
+//     Text(
+//       'Hello World',
+//       style: Theme.of(context).textTheme.headlineMedium,
+//     ),
+//     Text(
+//       'Hello World',
+//       style: Theme.of(context).textTheme.headlineLarge!.copyWith(color: Colors.green),
+//     ),
+//     Text(
+//       'Hello World',
+//       style: mTextStyle11(textColor: Colors.red),
+//     ),
+//   ],
+// ),
 
+///CardWidget
 
-
-      ///Styles & Themes
-      // body: Column(
-      //   children: [
-      //     Text(
-      //       'Hello World',
-      //       style: Theme.of(context).textTheme.headlineLarge!.copyWith(color: Colors.red),
-      //     ),
-      //     Text(
-      //       'Hello World',
-      //       style: Theme.of(context).textTheme.headlineMedium,
-      //     ),
-      //     Text(
-      //       'Hello World',
-      //       style: Theme.of(context).textTheme.headlineLarge!.copyWith(color: Colors.green),
-      //     ),
-      //     Text(
-      //       'Hello World',
-      //       style: mTextStyle11(textColor: Colors.red),
-      //     ),
-      //   ],
-      // ),
-      
-
-
-
-
-
-      ///CardWidget
-
- /*     body: Center(
+/*     body: Center(
         child: Card(
           shadowColor: Colors.orange,
           elevation: 5,
@@ -650,12 +631,11 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
       ),*/
 
+///Adding Text Input Widgets(TextField)
+// A TextField is an input element which hold the alphanumeric data, such as name, password, address etc
+// Enable the user to enter text information using a programmable code
 
-      ///Adding Text Input Widgets(TextField)
-      // A TextField is an input element which hold the alphanumeric data, such as name, password, address etc
-      // Enable the user to enter text information using a programmable code
-
-      /*body: Center(
+/*body: Center(
           child:
           Container(
             width: 300,
@@ -739,9 +719,8 @@ class _MyHomePageState extends State<MyHomePage> {
           )
       ),*/
 
-
-      ///Getting current Date & Time
-      /*body: Center(
+///Getting current Date & Time
+/*body: Center(
         child: Container(
           width: 300,
           height: 300,
@@ -766,9 +745,9 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
       ),*/
 
-      ///Date Format Patterns
-      //import 'package:intl/intl.dart';   this package and it's dependency is required for formating date time
-   /*   body: Center(
+///Date Format Patterns
+//import 'package:intl/intl.dart';   this package and it's dependency is required for formating date time
+/*   body: Center(
         child: Container(
           width: 300,
           height: 300,
@@ -796,8 +775,8 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
       ),*/
 
-      ///Showing a Date-Time Picker
-      /*body: Center(
+///Showing a Date-Time Picker
+/*body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
@@ -844,54 +823,49 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
       )*/
 
+///Grid-View with container
+// body: Container(
+//   width: 300,
+//   child: GridView.count(crossAxisCount: 4,
+//   children: [
+//     Padding(
+//       padding: const EdgeInsets.all(8.0),
+//       child: Container(color: arrcolors[0]),
+//     ),
+//     Padding(
+//       padding: const EdgeInsets.all(8.0),
+//       child: Container(color: arrcolors[1]),
+//     ),
+//     Padding(
+//       padding: const EdgeInsets.all(8.0),
+//       child: Container(color: arrcolors[2]),
+//     ),
+//     Padding(
+//       padding: const EdgeInsets.all(8.0),
+//       child: Container(color: arrcolors[3]),
+//     ),
+//     Padding(
+//       padding: const EdgeInsets.all(8.0),
+//       child: Container(color: arrcolors[4]),
+//     ),
+//     Padding(
+//       padding: const EdgeInsets.all(8.0),
+//       child: Container(color: arrcolors[5]),
+//     ),
+//     Padding(
+//       padding: const EdgeInsets.all(8.0),
+//       child: Container(color: arrcolors[6]),
+//     ),
+//     Padding(
+//       padding: const EdgeInsets.all(8.0),
+//       child: Container(color: arrcolors[7]),
+//     ),
+//   ],
+//   ),
+// )
 
-      ///Grid-View with container
-      // body: Container(
-      //   width: 300,
-      //   child: GridView.count(crossAxisCount: 4,
-      //   children: [
-      //     Padding(
-      //       padding: const EdgeInsets.all(8.0),
-      //       child: Container(color: arrcolors[0]),
-      //     ),
-      //     Padding(
-      //       padding: const EdgeInsets.all(8.0),
-      //       child: Container(color: arrcolors[1]),
-      //     ),
-      //     Padding(
-      //       padding: const EdgeInsets.all(8.0),
-      //       child: Container(color: arrcolors[2]),
-      //     ),
-      //     Padding(
-      //       padding: const EdgeInsets.all(8.0),
-      //       child: Container(color: arrcolors[3]),
-      //     ),
-      //     Padding(
-      //       padding: const EdgeInsets.all(8.0),
-      //       child: Container(color: arrcolors[4]),
-      //     ),
-      //     Padding(
-      //       padding: const EdgeInsets.all(8.0),
-      //       child: Container(color: arrcolors[5]),
-      //     ),
-      //     Padding(
-      //       padding: const EdgeInsets.all(8.0),
-      //       child: Container(color: arrcolors[6]),
-      //     ),
-      //     Padding(
-      //       padding: const EdgeInsets.all(8.0),
-      //       child: Container(color: arrcolors[7]),
-      //     ),
-      //   ],
-      //   ),
-      // )
-
-
-
-
-
-      ///Grid-View without container and padding
-    /*    body: Column(
+///Grid-View without container and padding
+/*    body: Column(
           children: [
             Container(
               height: 200,
@@ -913,7 +887,7 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
 
               //use gridview.extent when you want to show your grid based on screen size..
-          *//*    child: GridView.extent(
+          */ /*    child: GridView.extent(
                 maxCrossAxisExtent: 100,
                 crossAxisSpacing: 11,
                 mainAxisSpacing: 11,
@@ -927,14 +901,13 @@ class _MyHomePageState extends State<MyHomePage> {
                   Container(color: arrcolors[6]),
                   Container(color: arrcolors[7]),
                 ],
-              ),*//*
+              ),*/ /*
 
           ],
         )*/
 
-
-      ///Grid-view builder dynamic for unknown size of data
- /*     body: GridView.builder(itemBuilder: (context, index) {
+///Grid-view builder dynamic for unknown size of data
+/*     body: GridView.builder(itemBuilder: (context, index) {
         return Container(
           color: arrcolors[index],
         );
@@ -948,28 +921,20 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       ),*/
 
-
-      ///callBack function
-      // Data flow, Data passing
-    /*  body: ElevatedButton(
+///callBack function
+// Data flow, Data passing
+/*  body: ElevatedButton(
           onPressed: callBack, child: Text('Click Me!!')),*/
 
-
-
-      ///Custom Widget
-      ///Spliting the app into widgets
-      //My created/build widgets
-
-
-
+///Custom Widget
+///Spliting the app into widgets
+//My created/build widgets
 
 /*
     );
   }
 }
 */
-
-
 
 ///--------------------------------------------------------------------------------------------------
 // void main() {
@@ -1183,7 +1148,6 @@ class _MyHomePageState extends State<MyHomePage> {
 // }
 //
 
-
 /// Stack Widget
 //A widget that positions its children relative to the edges of its box.
 //This class is useful if you want to overlap several children in a  simple way,
@@ -1260,8 +1224,6 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 }*/
 
-
-
 ///Creating a new custom widget
 
 /*void main(){
@@ -1321,6 +1283,7 @@ class _MyHomePageState extends State<MyHomePage> {
 }*/
 
 /**----------------------------------------------------------------------------*/
+
 ///Wrap Widget in Flutter
 
 /*
@@ -1431,7 +1394,6 @@ class _MyHomePageState extends State<MyHomePage> {
 }
 */
 
-
 /**------------------------------------------------------------------------------*/
 
 ///SizedBox
@@ -1497,7 +1459,6 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 }
 */
-
 
 ///Rich Text Widget
 /*void main(){
@@ -1597,9 +1558,7 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 }*/
 
-
 /** --------------------------------------------------------------------------------*/
-
 
 ///Icon Widgets
 /*
@@ -1728,10 +1687,7 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 }*/
 
-
-
 /**---------------------------------------------------------------------*/
-
 
 /*
 ///Positioned Widget
@@ -1801,6 +1757,7 @@ class _MyHomePageState extends State<MyHomePage> {
 */
 
 /**---------------------------------------------------------------------------*/
+
 ///Counter App with setState
 
 /*void main(){
@@ -1917,11 +1874,9 @@ class _MyHomePageState extends State<MyHomePage> {
 
 /**--------------------------------------------------------------------------------------*/
 
-
-
 ///setState(), Updating Correctly with stateful widgets
 
-void main(){
+/*void main(){
   runApp(MyApp());
 }
 
@@ -2060,11 +2015,74 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
     );
   }
-}
+}*/
 /**------------------------------------------------------------------------*/
 
+///Constraint Box
 
+void main() {
+  runApp(MyApp());
+}
 
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
 
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(debugShowCheckedModeBanner: false, home: MyHomePage());
+  }
+}
 
+class MyHomePage extends StatefulWidget {
+  const MyHomePage({super.key});
 
+  @override
+  State<MyHomePage> createState() => _MyHomePageState();
+}
+
+class _MyHomePageState extends State<MyHomePage> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Center(
+          child: Text(
+            'Constraint Box',
+            style: TextStyle(
+              fontWeight: FontWeight.bold,
+              fontSize: 32,
+              color: Colors.green,
+            ),
+          ),
+        ),
+        backgroundColor: Colors.red,
+      ),
+      
+      body: ConstrainedBox(
+        constraints: BoxConstraints(
+          maxWidth: 200,
+          maxHeight: 100,
+        ),
+        child: 
+        // Text('Hello World!, Hello Developer, Hello Raju, Hig Raju , What are you doin,  ',
+        //   style: TextStyle(
+        //     fontSize: 21,
+        //     overflow: TextOverflow.fade,
+        //   ),
+        // ),
+        ElevatedButton(
+            onPressed: (){
+              
+            }, child: Text(
+            'Button'
+        ),
+          style: ElevatedButton.styleFrom(
+            backgroundColor: Colors.purple,
+            foregroundColor: Colors.white,
+          ),
+        )
+        
+      ),
+    );
+  }
+}
