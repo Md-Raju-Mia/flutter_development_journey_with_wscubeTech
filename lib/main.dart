@@ -1,3 +1,4 @@
+import 'package:container_flutter_project/introPage.dart';
 import 'package:container_flutter_project/ui_helper/util.dart';
 import 'package:container_flutter_project/widgets/rounded_btn.dart';
 import 'package:flutter/material.dart';
@@ -2020,7 +2021,78 @@ class _MyHomePageState extends State<MyHomePage> {
 
 ///Constraint Box
 
-void main() {
+// void main() {
+//   runApp(MyApp());
+// }
+//
+// class MyApp extends StatelessWidget {
+//   const MyApp({super.key});
+//
+//   @override
+//   Widget build(BuildContext context) {
+//     return MaterialApp(debugShowCheckedModeBanner: false, home: MyHomePage());
+//   }
+// }
+//
+// class MyHomePage extends StatefulWidget {
+//   const MyHomePage({super.key});
+//
+//   @override
+//   State<MyHomePage> createState() => _MyHomePageState();
+// }
+//
+// class _MyHomePageState extends State<MyHomePage> {
+//   @override
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+//       appBar: AppBar(
+//         title: Center(
+//           child: Text(
+//             'Constraint Box',
+//             style: TextStyle(
+//               fontWeight: FontWeight.bold,
+//               fontSize: 32,
+//               color: Colors.green,
+//             ),
+//           ),
+//         ),
+//         backgroundColor: Colors.red,
+//       ),
+//
+//       body: ConstrainedBox(
+//         constraints: BoxConstraints(
+//           maxWidth: 200,
+//           maxHeight: 100,
+//         ),
+//         child:
+//         // Text('Hello World!, Hello Developer, Hello Raju, Hig Raju , What are you doin,  ',
+//         //   style: TextStyle(
+//         //     fontSize: 21,
+//         //     overflow: TextOverflow.fade,
+//         //   ),
+//         // ),
+//         ElevatedButton(
+//             onPressed: (){
+//
+//             }, child: Text(
+//             'Button'
+//         ),
+//           style: ElevatedButton.styleFrom(
+//             backgroundColor: Colors.purple,
+//             foregroundColor: Colors.white,
+//           ),
+//         )
+//
+//       ),
+//     );
+//   }
+// }
+
+/**---------------------------------------------------------------------------------------*/
+
+///Switching from one Screen to Another
+
+void main(){
   runApp(MyApp());
 }
 
@@ -2029,60 +2101,33 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(debugShowCheckedModeBanner: false, home: MyHomePage());
+    return MaterialApp(
+      theme: ThemeData(
+        primarySwatch: Colors.orange
+      ),
+
+      home: IntroPage(),
+    );
   }
 }
 
-class MyHomePage extends StatefulWidget {
+
+class MyHomePage extends StatelessWidget {
   const MyHomePage({super.key});
 
-  @override
-  State<MyHomePage> createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Center(
-          child: Text(
-            'Constraint Box',
-            style: TextStyle(
-              fontWeight: FontWeight.bold,
-              fontSize: 32,
-              color: Colors.green,
-            ),
-          ),
-        ),
-        backgroundColor: Colors.red,
+        title: Text("Switching Screen"),
       ),
-      
-      body: ConstrainedBox(
-        constraints: BoxConstraints(
-          maxWidth: 200,
-          maxHeight: 100,
-        ),
-        child: 
-        // Text('Hello World!, Hello Developer, Hello Raju, Hig Raju , What are you doin,  ',
-        //   style: TextStyle(
-        //     fontSize: 21,
-        //     overflow: TextOverflow.fade,
-        //   ),
-        // ),
-        ElevatedButton(
-            onPressed: (){
-              
-            }, child: Text(
-            'Button'
-        ),
-          style: ElevatedButton.styleFrom(
-            backgroundColor: Colors.purple,
-            foregroundColor: Colors.white,
-          ),
-        )
-        
-      ),
+
+      body: Text('Hello World'),
     );
   }
 }
+
+
+
+
+
