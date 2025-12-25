@@ -1,4 +1,5 @@
 import 'package:container_flutter_project/introPage.dart';
+import 'package:container_flutter_project/splash_screen.dart';
 import 'package:container_flutter_project/ui_helper/util.dart';
 import 'package:container_flutter_project/widgets/rounded_btn.dart';
 import 'package:flutter/material.dart';
@@ -2092,6 +2093,45 @@ class _MyHomePageState extends State<MyHomePage> {
 
 ///Switching from one Screen to Another
 
+// void main(){
+//   runApp(MyApp());
+// }
+//
+// class MyApp extends StatelessWidget {
+//   const MyApp({super.key});
+//
+//   @override
+//   Widget build(BuildContext context) {
+//     return MaterialApp(
+//       theme: ThemeData(
+//         primarySwatch: Colors.orange
+//       ),
+//
+//       home: IntroPage(),
+//     );
+//   }
+// }
+//
+//
+// class MyHomePage extends StatelessWidget {
+//   const MyHomePage({super.key});
+//
+//   @override
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+//       appBar: AppBar(
+//         title: Text("Switching Screen"),
+//       ),
+//
+//       body: Text('Hello World'),
+//     );
+//   }
+// }
+//
+
+
+/**+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+
 void main(){
   runApp(MyApp());
 }
@@ -2102,27 +2142,46 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      title: "FlutterApp",
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: Colors.orange
+        primarySwatch: Colors.blue
       ),
+      home: SplashScreen(),
 
-      home: IntroPage(),
+
     );
   }
 }
 
 
-class MyHomePage extends StatelessWidget {
-  const MyHomePage({super.key});
+class DashboardScreen extends StatelessWidget {
+  const DashboardScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Switching Screen"),
+        title: Text('data'),
       ),
+      body: Center(
+        child: Container(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text("DashBoard",
+              style: TextStyle(
+                color: Colors.black,
+              ),
+              ),
+              ElevatedButton(onPressed: null,
+                  child: Text("Hello")
+              )
+            ],
+          ),
 
-      body: Text('Hello World'),
+        ),
+      ),
     );
   }
 }
