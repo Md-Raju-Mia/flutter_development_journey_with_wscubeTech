@@ -2194,6 +2194,74 @@ class _MyHomePageState extends State<MyHomePage> {
 
 /**Passing Data From one Screen to Another Screen*/
 
+// void main(){
+//   runApp(MyApp());
+// }
+//
+// class MyApp extends StatelessWidget {
+//   const MyApp({super.key});
+//
+//   @override
+//   Widget build(BuildContext context) {
+//     return MaterialApp(
+//       title: "FlutterApp",
+//       debugShowCheckedModeBanner: false,
+//       theme: ThemeData(
+//         primarySwatch: Colors.blue
+//       ),
+//       home: SplashScreen(),
+//
+//
+//     );
+//   }
+// }
+//
+//
+// class DashboardScreen extends StatelessWidget {
+//
+//   var nameController = TextEditingController();
+//
+//   @override
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+//       appBar: AppBar(
+//         title: Text('data'),
+//       ),
+//       body: Center(
+//         child: Container(
+//           width: 300,
+//           child: Column(
+//             mainAxisAlignment: MainAxisAlignment.center,
+//             children: [
+//               Text("DashBoard Screen",
+//               style: TextStyle(
+//                 fontSize: 25,
+//               ),
+//               ),
+//               SizedBox(height: 11,),
+//               TextField(
+//                 controller: nameController,
+//               ),
+//               ElevatedButton(onPressed: (){
+//                 Navigator.push(context, MaterialPageRoute(builder: (context) => MyProfileScreen(nameController.text.toString()),
+//                 ));
+//               },
+//                   child: Text("My Profile")
+//               )
+//             ],
+//           ),
+//
+//         ),
+//       ),
+//     );
+//   }
+// }
+
+
+/**+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+
+///Adding a range Slider
+
 void main(){
   runApp(MyApp());
 }
@@ -2204,60 +2272,51 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: "FlutterApp",
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        primarySwatch: Colors.blue
-      ),
-      home: SplashScreen(),
-
-
+      home: MyHomePage(),
     );
   }
 }
 
+class MyHomePage extends StatefulWidget {
+  
+  @override
+  State<MyHomePage> createState() => _MyHomePageState();
+}
 
-class DashboardScreen extends StatelessWidget {
-
-  var nameController = TextEditingController();
+class _MyHomePageState extends State<MyHomePage> {
+  RangeValues values = RangeValues(0, 1);
+  // RangeValues values = RangeValues(0, 100);
 
   @override
   Widget build(BuildContext context) {
+    RangeLabels labels = RangeLabels(values.start.toString(), values.end.toString());
     return Scaffold(
       appBar: AppBar(
-        title: Text('data'),
+        title: Text('Range'),
       ),
-      body: Center(
-        child: Container(
-          width: 300,
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Text("DashBoard Screen",
-              style: TextStyle(
-                fontSize: 25,
-              ),
-              ),
-              SizedBox(height: 11,),
-              TextField(
-                controller: nameController,
-              ),
-              ElevatedButton(onPressed: (){
-                Navigator.push(context, MaterialPageRoute(builder: (context) => MyProfileScreen(nameController.text.toString()),
-                ));
-              },
-                  child: Text("My Profile")
-              )
-            ],
-          ),
 
+      body: Center(
+        child: RangeSlider(
+            values: values,
+            labels: labels,
+            divisions: 10,
+            // activeColor: Colors.green,
+            // inactiveColor: Colors.red,
+          activeColor: Colors.green,
+          inactiveColor: Colors.green.shade100,
+            // min: 0,   ///This two value min max have to give if you want to take range between 0 to 100
+            // max: 100,
+            onChanged: (newValue){
+              values = newValue;
+              print('${newValue.start}, ${newValue.end}');
+              setState(() {
+
+              });
+            },
         ),
       ),
     );
   }
 }
 
-
-/**+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
-
-
+/**++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
