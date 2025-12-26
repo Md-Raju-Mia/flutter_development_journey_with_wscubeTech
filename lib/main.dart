@@ -1,4 +1,5 @@
 import 'package:container_flutter_project/introPage.dart';
+import 'package:container_flutter_project/my_profile_screen.dart';
 import 'package:container_flutter_project/splash_screen.dart';
 import 'package:container_flutter_project/ui_helper/util.dart';
 import 'package:container_flutter_project/widgets/rounded_btn.dart';
@@ -2132,6 +2133,67 @@ class _MyHomePageState extends State<MyHomePage> {
 
 /**+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 
+
+/**Splash Screen*/
+
+// void main(){
+//   runApp(MyApp());
+// }
+//
+// class MyApp extends StatelessWidget {
+//   const MyApp({super.key});
+//
+//   @override
+//   Widget build(BuildContext context) {
+//     return MaterialApp(
+//       title: "FlutterApp",
+//       debugShowCheckedModeBanner: false,
+//       theme: ThemeData(
+//         primarySwatch: Colors.blue
+//       ),
+//       home: SplashScreen(),
+//
+//
+//     );
+//   }
+// }
+//
+//
+// class DashboardScreen extends StatelessWidget {
+//   const DashboardScreen({super.key});
+//
+//   @override
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+//       appBar: AppBar(
+//         title: Text('data'),
+//       ),
+//       body: Center(
+//         child: Container(
+//           child: Column(
+//             mainAxisAlignment: MainAxisAlignment.center,
+//             children: [
+//               Text("DashBoard",
+//               style: TextStyle(
+//                 color: Colors.black,
+//               ),
+//               ),
+//               ElevatedButton(onPressed: null,
+//                   child: Text("Hello")
+//               )
+//             ],
+//           ),
+//
+//         ),
+//       ),
+//     );
+//   }
+// }
+
+/**++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+
+/**Passing Data From one Screen to Another Screen*/
+
 void main(){
   runApp(MyApp());
 }
@@ -2156,7 +2218,8 @@ class MyApp extends StatelessWidget {
 
 
 class DashboardScreen extends StatelessWidget {
-  const DashboardScreen({super.key});
+
+  var nameController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -2166,16 +2229,24 @@ class DashboardScreen extends StatelessWidget {
       ),
       body: Center(
         child: Container(
+          width: 300,
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text("DashBoard",
+              Text("DashBoard Screen",
               style: TextStyle(
-                color: Colors.black,
+                fontSize: 25,
               ),
               ),
-              ElevatedButton(onPressed: null,
-                  child: Text("Hello")
+              SizedBox(height: 11,),
+              TextField(
+                controller: nameController,
+              ),
+              ElevatedButton(onPressed: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context) => MyProfileScreen(nameController.text.toString()),
+                ));
+              },
+                  child: Text("My Profile")
               )
             ],
           ),
@@ -2187,6 +2258,6 @@ class DashboardScreen extends StatelessWidget {
 }
 
 
-
+/**+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 
 
